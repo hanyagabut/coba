@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body
+{
+	width: 100%;
+	min-height: 100vh;
+	background:url('https://images.hdqwalls.com/wallpapers/garena-free-fire-2021-4k-mn.jpg') no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+body:before
+{
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.50);
+}
+.loader
+{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999999999;
+    background:#110617;
+    flex-direction:column;
+}
+.loader img
+{
+    max-width:320px;
+}
+section
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background:url('../img/bg.jpg') no-repeat;
+	background-size: cover;
+	box-shadow: 0 0 5px rgba(0,0,0,0.50);
+	padding-top: 50px;
+	padding-bottom: 55px;
+	overflow: hidden;
+	border:2px solid #c119e2;
+	border-radius: 3px;
+	background-attachment: fixed;
+}
+section:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.50);
+}
+footer
+{
+ position: absolute;
+ bottom: 0;
+ left: 50%;
+ transform: translate(-50%);
+ width: 100%;
+ height: 50px;
+ background: #333;
+ z-index:99999;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ padding: 10px;
+ text-align: center;
+ color: #fff;
+ font-family: 'Bebas Neue', cursive;
+ border-top: 2px solid #c119e2;
+}
+header
+{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 50px;
+	background: url('https://cdngarenanow-a.akamaihd.net/webid/FF/summerswordsman/title.png') no-repeat;
+	background-size: 100% 100%;
+	box-shadow: 0 2px 50px rgba(0,0,0,0.50);
+	z-index: 9999;
+}
+header img
+{
+	position: absolute;
+	top: 44%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	max-width: 200px;
+}
+section .app
+{
+	position: relative;
+	width: 100%;
+	color: #333;
+	padding: 5px;
+}
+.app .banner
+{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	border:2px solid #c119e2;
+	overflow: hidden;
+	border-radius: 3px;
+	box-shadow: 0 0.5px 5px rgba(0,0,0,0.50);
+}
+.banner svg, svg rect
+{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ fill: transparent;
+ z-index:9;
+}
+svg rect
+{
+ stroke: purple;
+ stroke-width: 4;
+ stroke-dasharray: 100;
+ animation: gg 5s infinite linear;
+}
+@keyframes gg
+{
+ from
+ {
+  stroke-dashoffset:0;
+ }
+ to
+ {
+  stroke-dashoffset:400;
+ }
+}
+.app .banner img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+}
+.app .textBox
+{
+	position: relative;
+	margin-top: 10px;
+	width: 100%;
+	height: 50px;
+	background: url('../img/banner.png') no-repeat;
+	background-size: cover;
+	background-position:100% 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	border: 2px solid #c119e2;
+	border-radius: 3px;
+	color:#fff;
+	font-weight: bold;
+	box-shadow: 0 0.5px 5px rgba(0,0,0,0.50);
+	text-shadow: 0 0.5px 5px rgba(0,0,0,0.50);
+	letter-spacing: 0.5px;
+	font-size: 2em;
+	font-family: 'Bebas Neue', cursive;
+}
+.app .spinArea
+{
+ margin-top: 10px;
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border: 2px solid #c119e2;
+	border-radius: 3px;
+	color:#fff;
+	font-weight: bold;
+	box-shadow: 0 0.5px 5px rgba(0,0,0,0.50);
+	background: url('../img/banner.png') no-repeat;
+	background-size: cover;
+	padding-bottom: 20px;
+	background-position:100% 20%;
+}
+.spinArea .spinBox
+{
+	margin-top: 5px;
+	position: relative;
+	width: 100%;
+	height: 400px;
+}
+.spinBox .center
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+	width: 100px;
+	height: 100px;
+}
+.center img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('spin.png') no-repeat;
+	background-size: 100% 100%;
+	transition: ease-in-out 4.5s;
+	transform: rotate(0deg);
+}
+.spinBox .turntable
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('https://i.ibb.co/ZTfFj0S/1618657971534.png') no-repeat;
+	background-size: 100% 100%;
+	/*transform: rotate(17deg);*/
+}
+.spinArea .spinBtn
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.spinBtn button
+{
+	width: 140px;
+	border: none;
+	outline: none;
+	height: 50px;
+	background: url('https://dl.dir.freefiremobile.com/common/web_event/summerspin2remake/images/spin_btn.png') no-repeat;
+	background-size: 100% 100%;
+	color:#fff;
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 0.5px;
+	text-shadow: 0 0.5px 5px rgba(0,0,0,0.50);
+	font-family: 'Bebas Neue', cursive;
+}
+.mask
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.50);
+	display: block;
+	z-index: 9999999;
+}
+.popHadiah
+{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 350px;
+	height: 200px;
+	background: url('https://dl.dir.freefiremobile.com/common/web_event/treasurevault/images/dialog.png') no-repeat;
+	background-size: 100% 100%;
+	z-index: 99999999;
+	display: none;
+}
+.popHadiah h1
+{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top:10px;
+	color: #fff;
+	text-align: center;
+	font-size: 17px;
+	width: 100%;
+	text-shadow: 0 0.5px 5px rgba(0,0,0,0.50);
+	font-family: 'Bebas Neue', cursive;
+}
+.popHadiah .btn
+{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top:145px;
+	background: url('https://dl.dir.freefiremobile.com/common/web_event/treasurevault/images/multiple_btn.png') no-repeat;
+	width: 80px;
+	height: 30px;
+	background-size: 100% 100%;
+	padding: 5px;
+	outline: none;
+	border: none;
+	font-size: 13px;
+	text-shadow: 0 0.5px 5px rgba(0,0,0,0.50);
+	color:#b14b00;
+	font-family: 'Bebas Neue', cursive;
+}
+.popHadiah p
+{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top:145px;
+	width: 100%;
+	padding: 5px;
+	text-align:center;
+	outline: none;
+	border: none;
+	font-size: 13px;
+	text-shadow: 0 0.5px 5px rgba(0,0,0,0.50);
+	color:#fff;
+	font-family: 'Bebas Neue', cursive;
+}
+.popHadiah .imgBox
+{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top:40px;
+	width: 80px;
+	height: 90px;
+	background: red;
+	border-radius: 3px;
+	box-shadow: 0 0.5px 5px rgba(0,0,0,0.50);
+}
+.popHadiah .sukses
+{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top:40px;
+	width:100px;
+	height: 100px;
+}
+.imgBox .imgHadiah
+{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius:3px;
+ border:1px solid yellow;
+}
+.app .formnya
+{
+   position: relative;
+   width:100%;
+   text-align:center;
+   justify-content:center;
+}
+.formnya h1
+{
+   position:relative;
+   margin-top:10px;
+   font-family: 'Bebas Neue', cursive;
+   color:#fff;
+   font-size: 25px;
+   letter-spacing: 0.5px;
+   z-index:2;
+   text-shadow:0 0.5px 10px purple;
+   text-align:center;
+}
+.formnya .form-group
+{
+   position:relative;
+   width:100%;
+   display:flex;
+   justify-content:center;
+   flex-direction:column;
+   text-align:center;
+}
+.form-group .form-input
+{
+   outline:none;
+   padding-left:10px;
+   padding-right:13px;
+   height:40px;
+   border:none;
+   font-size: 16px;
+   background:url('../img/banner.png');
+   background-size:100% 100%;
+   color:#fff;
+   font-family: 'Bebas Neue', cursive;
+   box-shadow: 0 0.5px 5px rgba(0,0,0,0.50);
+   margin: 5px;
+   border-radius: 3px;
+}
+select 
+{
+   -moz-appearance:none;
+   -webkit-appearance:none;
+   appearance:none;
+}
+.form-group .form-button
+{
+   margin-top:10px;
+   outline:none;
+   padding-left:13px;
+   padding-right:13px;
+   height:40px;
+   border:none;
+   width:110px;
+   background:url('../img/banner ().png');
+   background-size:100% 100%;
+   font-weight:bold;
+   color:#fff;
+   display:flex;
+   justify-content:center;
+   font-family: 'Bebas Neue', cursive;
+   letter-spacing: 0.5px;
+   text-align:center;
+}
+.form-group .form-input::placeholder
+{
+   color:#fff;
+}
+.formnya .pesanForm
+{
+   position:absolute;
+   bottom:-30px;
+   left:50%;
+   transform:translateX(-50%);
+   font-family: 'Bebas Neue', cursive;
+   letter-spacing: 0.5px;
+   color:#fff;
+   width:250px;
+   text-align:center;
+   font-size: 10px;
+   text-shadow:0 0.5px 10px red;
+   padding:2px 5px;
+   display:none;
+}
+.checkId
+{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:350px;
+    height:200px;
+    z-index:99999999;
+}
+.checkId:before
+{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url('../img/dialog.png');
+    background-size:100% 100%;
+    z-index:1;
+}
+.checkId .tutup
+{
+    position: absolute;
+    top:10px;
+    left:20px;
+    width:20px;
+    height:20px;
+    background:url('../ngMedia/close.png');
+    background-size:100% 100%;
+    z-index:999999999;
+}
+.checkId .titleText
+{
+   position:absolute;
+   top:20px;
+   left:50%;
+   transform:translateX(-50%);
+   font-family: 'Bebas Neue', cursive;
+   color:#fff;
+   font-size: 20px;
+   text-shadow:0 0.5px 10px #b501f5;
+   z-index:999999999;
+}
+.checkId .idInput
+{
+   position:absolute;
+   top:60px;
+   left:50%;
+   transform:translateX(-50%);
+   font-family: 'Bebas Neue', cursive;
+   color:#fff;
+   background:none;
+   border:none;
+   width: 300px;
+   outline:none;
+   padding-left:13px;
+   height:50px;
+   background:url('../img/for_grand.png');
+   background-size:100% 100%;
+   z-index:999999999;
+}
+.checkId .idInput::placeholder
+{
+   color:#fff;
+}
+.checkId .idInput:focus
+{
+   outline:none;
+}
+.checkId .check
+{
+   position:absolute;
+   top:120px;
+   left:50%;
+   transform:translateX(-50%);
+   font-family: 'Bebas Neue', cursive;
+   color:#fff;
+   background:none;
+   border:none;
+   width: 70px;
+   outline:none;
+   text-align:center;
+   height:40px;
+   background:url('../img/banner ().png');
+   background-size:100% 100%;
+   z-index:999999999;
+}
+.checkId .alert
+{
+   position:absolute;
+   top:170px;
+   left:50%;
+   transform:translateX(-50%);
+   font-family: 'Bebas Neue', cursive;
+   color:#fff;
+   width:250px;
+   text-align:center;
+   font-size: 10px;
+   text-shadow:0 0.5px 10px #b501f5;
+   padding:2px 5px;
+   z-index:999999999;
+   display:none;
+}
+
+.toast
+{
+   position:fixed;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   height:30px;
+   text-align:center;
+   line-height:30px;
+   color:#fff;
+   font-family: 'Bebas Neue', cursive;
+   background:url('../img/toast.png');
+   background-size:100% 100%;
+   z-index:999999999;
+   overflow:hidden;
+   word-wrap:normal;
+   display:none;
+   animation: masuk .5s forwards linear;
+}
+@keyframes masuk
+{
+   from
+   {
+      width:0;
+   }
+   to
+   {
+      width:400px;
+   }
+}
+.toast .vis
+{
+  opacity:0;
+  animation: fade .5s forwards linear;
+  animation-delay:.2s;
+}
+@keyframes fade
+{
+   from
+   {
+      opacity:0;
+   }
+   to
+   {
+      opacity:1;
+   }
+}
+@media(min-width: 991px)
+{
+	section,header
+	{
+		width: 400px;
+	}
+}
+@media(max-width: 817px)
+{
+	.app .spinBox
+	{
+		width: 400px;
+	}
+}
+@media(max-width: 409px)
+{
+	.app .spinBox
+	{
+		width: 350px;
+		height: 350px;
+	}
+}
+@media(max-width: 320px)
+{
+	.app .spinBox
+	{
+		width: 300px;
+		height: 300px;
+	}
+}
+@media(max-width: 363px)
+{
+	.app .spinBox
+	{
+		width: 300px;
+		height: 300px;
+	}
+}
